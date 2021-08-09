@@ -86,7 +86,7 @@
                                         <div style="width:22%;" class="padLR">
                                             <div style="width:100%;" ng-repeat="header in tab.DisplayColumns">
                                                 <span ng-if="header.IsShowSiteColumn!=0">
-                                                    <input id="searchTitle" type="text" placeholder="Task Name"
+                                                    <input id="searchTitle" type="text" placeholder={{header.Title}}
                                                            class="searchbox_height width-90"
                                                            ng-model="searchbox['search'+header.InternalName]" />
                                                     <span ng-show="searchbox.searchTitle.length>0" class="searchclear"
