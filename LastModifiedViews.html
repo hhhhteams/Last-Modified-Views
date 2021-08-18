@@ -323,24 +323,24 @@
                                             </div>
 
 
-                                            <div class="padLR" style="width:13%; ">
+                                            <div class="padLR" style="width:13%; " ng-if="tab.Title!='FOLDERS' &&tab.Title!='DOCUMENTS' && tab.Title!='COMPONENTS'&& tab.Title!='SERVICES' ">
                                                 <!--{{item.componentString}}-->                                               
                                                 <span ng-show="item.Component.results.length>0" ng-repeat="comp in item.Component.results "
-                                                      ng-if="tab.Title!='FOLDERS' &&tab.Title!='DOCUMENTS' ">
+                                                      >
                                                     <a target="_blank "
                                                        ng-href="{{SubSiteURL}}/SitePages/Portfolio-Profile.aspx?taskId={{comp.Id}} ">
                                                         {{comp.Title}}
                                                     </a>
                                                 </span>
                                                 <span ng-show="item.Services.results.length>0" ng-repeat="comp in item.Services.results "
-                                                      ng-if="tab.Title!='FOLDERS' &&tab.Title!='DOCUMENTS' ">
+                                                      >
                                                     <a target="_blank "
                                                        ng-href="{{SubSiteURL}}/SitePages/Portfolio-Profile.aspx?taskId={{comp.Id}} ">
                                                         {{comp.Title}}
                                                     </a>
                                                 </span>
                                                 <span ng-show="item.Events.results.length>0" ng-repeat="comp in item.Events.results "
-                                                      ng-if="tab.Title!='FOLDERS' &&tab.Title!='DOCUMENTS' ">
+                                                      >
                                                     <a target="_blank "
                                                        ng-href="{{SubSiteURL}}/SitePages/Portfolio-Profile.aspx?taskId={{comp.Id}} ">
                                                         {{comp.Title}}
