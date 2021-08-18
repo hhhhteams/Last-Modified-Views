@@ -83,6 +83,20 @@
                                                       ng-click="sortBy( 'Shareweb_x0020_ID', true) "></span>
                                             </div>
                                         </div>
+                                        <div style="width:12%;" class="padLR"
+                                             ng-if="tab.Title=='COMPONENTS' || tab.Title=='SERVICES'">
+                                            <div style="width:80%;">
+                                                <input type="text " id="searchTaskID " placeholder="ID"
+                                                       class="searchbox_height width-90 ng-valid ng-dirty ng-touched ng-empty "
+                                                       ng-model="searchbox.searchTaskID" />
+                                                <span ng-show="searchbox.searchTaskID.length>0" class="searchclear "
+                                                      ng-click="clearControl( 'searchTaskID') ">X</span>
+                                                <span class="{{orderBy=='PortfolioStructureID' &&!reverse? 'glyphicon_active': 'glyphicon'}} glyphicon-chevron-up direction-arrow arrow_up "
+                                                      ng-click="sortBy( 'PortfolioStructureID', false) "></span>
+                                                <span class="{{orderBy=='PortfolioStructureID' &&reverse? 'glyphicon_active': 'glyphicon'}} glyphicon-chevron-down direction-arrow arrow_down "
+                                                      ng-click="sortBy( 'PortfolioStructureID', true) "></span>
+                                            </div>
+                                        </div>
                                         <div style="width:22%;" class="padLR">
                                             <div style="width:100%;" ng-repeat="header in tab.DisplayColumns">
                                                 <span ng-if="header.IsShowSiteColumn!=0">
@@ -99,9 +113,9 @@
                                             </div>
                                         </div>
 
-                                        <div style="width:13%;" class="padLR">
+                                        <div style="width:13%;" class="padLR" ng-if="tab.Title!='FOLDERS' && tab.Title!='DOCUMENTS' && tab.Title!='COMPONENTS'&& tab.Title!='SERVICES'">
                                             <div style="width:80%;" class="padLR"
-                                                 ng-if="tab.Title!='FOLDERS'&&tab.Title!='DOCUMENTS'">
+                                                 >
                                                 <input id="searchPriorityRank" type="search" placeholder="Component"
                                                        class="width-90 searchbox_height"
                                                        ng-model="searchbox.searchPriorityRank" />
