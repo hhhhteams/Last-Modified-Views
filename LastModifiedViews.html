@@ -86,11 +86,11 @@
                                         <div style="width:12%;" class="padLR"
                                              ng-if="tab.Title=='COMPONENTS' || tab.Title=='SERVICES'">
                                             <div style="width:80%;">
-                                                <input type="text " id="searchTaskID " placeholder="ID"
+                                                <input type="text " id="compID " placeholder="ID"
                                                        class="searchbox_height width-90 ng-valid ng-dirty ng-touched ng-empty "
-                                                       ng-model="searchbox.searchTaskID" />
-                                                <span ng-show="searchbox.searchTaskID.length>0" class="searchclear "
-                                                      ng-click="clearControl( 'searchTaskID') ">X</span>
+                                                       ng-model="searchbox.compID" />
+                                                <span ng-show="searchbox.compID.length>0" class="searchclear "
+                                                      ng-click="clearControl( 'compID') ">X</span>
                                                 <span class="{{orderBy=='PortfolioStructureID' &&!reverse? 'glyphicon_active': 'glyphicon'}} glyphicon-chevron-up direction-arrow arrow_up "
                                                       ng-click="sortBy( 'PortfolioStructureID', false) "></span>
                                                 <span class="{{orderBy=='PortfolioStructureID' &&reverse? 'glyphicon_active': 'glyphicon'}} glyphicon-chevron-down direction-arrow arrow_down "
@@ -225,7 +225,7 @@
                                     <div class="container-new">
                                         <li class="{{item.Portfoliotype=='Service'?'taskprofilepagegreen':''||item.Portfoliotype=='Events'?'taskprofilepageorange':''||tab.Title=='SERVICES'?'taskprofilepagegreen':''}} tdrows for-lis"
                                             ng-repeat="item in filteredItems = (tab.Items | filter:searchbox.GlobalSearch | orderBy:orderBy:reverse
-                                             | filter:{ Title:searchbox.searchTitle,Shareweb_x0020_ID:searchbox.searchTaskID,Item_x002d_Rank:searchbox.searchItem_x002d_Rank,Page_x002d_Title:searchbox.searchPage_x002d_Title,FileLeafRef:searchbox.searchFileLeafRef,siteType:searchbox.searchSite,Project_x0020_Title_x0020__x00280:searchbox.searchProject_x0020_Title_x0020__x00280,Url:searchbox.searchUrl,FirstName:searchbox.searchFirstName,ProjectNumber:searchbox.searchProjectNumber,FullName:searchbox.searchFullName,ProfileType:searchbox.searchProfileType,componentString:searchbox.searchPriorityRank,AllTeamName: searchbox.searchTeam,priorityrank: searchbox.searchpriority, CustomStatus: searchbox.searchStatus,TaskDueDate:searchbox.searchDuedate}| filter:searchfilterediotr |filter:searchfilterauthore) track by $index">
+                                             | filter:{ Title:searchbox.searchTitle,Shareweb_x0020_ID:searchbox.searchTaskID,PortfolioStructureID:searchbox.compID,Item_x002d_Rank:searchbox.searchItem_x002d_Rank,Page_x002d_Title:searchbox.searchPage_x002d_Title,FileLeafRef:searchbox.searchFileLeafRef,siteType:searchbox.searchSite,Project_x0020_Title_x0020__x00280:searchbox.searchProject_x0020_Title_x0020__x00280,Url:searchbox.searchUrl,FirstName:searchbox.searchFirstName,ProjectNumber:searchbox.searchProjectNumber,FullName:searchbox.searchFullName,ProfileType:searchbox.searchProfileType,componentString:searchbox.searchPriorityRank,AllTeamName: searchbox.searchTeam,priorityrank: searchbox.searchpriority, CustomStatus: searchbox.searchStatus,TaskDueDate:searchbox.searchDuedate}| filter:searchfilterediotr |filter:searchfilterauthore) track by $index">
                                             <!-- <div class="padLR" style="width:2%;" ng-if="tab.Title=='DOCUMENTS' || tab.Title=='FOLDERS'">
                                             </div> -->
                                             <div class="padLR" style="width:2%;" ng-if="tab.Title=='DOCUMENTS' ">
