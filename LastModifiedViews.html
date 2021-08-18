@@ -237,6 +237,19 @@
                                                     <img ng-show="item.siteIcon!=undefined && item.siteIcon!=''" class="icon-sites-img " ng-src="{{item.siteIcon}} " />
                                                 </span> {{item.Shareweb_x0020_ID}}
                                             </div>
+                                            <div class="padLR" style="width:12%;"
+                                                 ng-show="tab.Title=='COMPONENTS'||tab.Title=='SERVICES'">
+                                                <span ng-show="item.Item_x0020_Type=='Component' ">
+                                                    <img class="icon-sites-img " ng-src="{{item.siteIcon1}} " />
+                                                </span>
+                                                <span ng-show="item.Item_x0020_Type=='SubComponent' ">
+                                                    <img class="icon-sites-img " ng-src="{{item.siteIcon2}} " />
+                                                </span>
+                                                <span ng-show="item.Item_x0020_Type=='Feature' ">
+                                                    <img  class="icon-sites-img " ng-src="{{item.siteIcon3}} " />
+                                                </span>
+                                                {{item.PortfolioStructureID}}
+                                            </div>
                                             <div style="width:12%;" ng-show="tab.Title=='ALL'">
                                                 <img ng-if="item.siteType =='GRUENE'" class="icon-sites-img ml-8"
                                                      ng-src="{{baseUrl}}/SiteCollectionImages/ICONS/Foundation/logo-gruene.png">
@@ -265,7 +278,7 @@
                                                 {{item.Shareweb_x0020_ID}}
                                             </div>
                                             <div class="padLR" style="width:2%;"
-                                                 ng-if="tab.Title=='COMPONENTS'||tab.Title=='SERVICES'">
+                                                 ng-if="tab.Title!='FOLDERS' &&tab.Title!='DOCUMENTS' && tab.Title!='COMPONENTS'&& tab.Title!='SERVICES' ">
                                                 <span ng-show="item.Item_x0020_Type=='Component' ">
                                                     <img class="icon-sites-img " ng-src="{{item.siteIcon1}} " />
                                                 </span>
